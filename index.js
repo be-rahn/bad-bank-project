@@ -6,10 +6,10 @@ function Spa() {
         value={{
           users: [
             {
-              name: "Peter Parker",
-              email: "peterp@marvel.com",
+              name: "Brooke Rahn",
+              email: "vjbrooklyn@yahoo.com",
               password: "secret",
-              balance: "986",
+              balance: "1000",
             },
           ],
         }}
