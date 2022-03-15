@@ -3,12 +3,8 @@ div.card-header {
   font-size: 2em;
 }
 
-a {
-    
-}
-
 a:hover {
-  color: #fff !important;
+  color: black !important;
 }
 a:hover {
 }

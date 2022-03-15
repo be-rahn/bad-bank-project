@@ -8,11 +8,11 @@ function Home() {
       }}
     >
       <Card
-        bgcolor="success"
+        bgcolor="info"
         txtcolor="black"
-        header="BadBank Landing Page"
-        title="Welcome to the Bank"
-        text="Please create an account and then login in order to make transactions"
+        header="Bad Bank"
+        title="Welcome to Bad Bank"
+        text="Please create an account and then login in to make transactions. Your information may be shared by us to anyone at anytime. 😏"
         body={
           <img src="bank.png" className="img-fluid" alt="Responsive image" />
         }

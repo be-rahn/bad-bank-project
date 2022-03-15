@@ -76,7 +76,7 @@ function CreateAccount() {
       }}
     >
       <Card
-        bgcolor="success"
+        bgcolor="primary"
         header="Create Account"
         status={status}
         body={

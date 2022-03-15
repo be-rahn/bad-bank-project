@@ -13,7 +13,7 @@ function AllData() {
           <Card
             key={i}
             bgcolor="info"
-            txtcolor="black"
+            txtcolor="gray"
             header={"Account information for: " + ctx.name}
             title={"Balance: $" + ctx.balance}
             text={"Email: " + ctx.email}

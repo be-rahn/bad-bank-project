@@ -8,7 +8,7 @@ function NavBar() {
           justifyContent: "center",
         }}
       >
-        <nav className="navbar navbar-expand-lg navbar-light bg-info">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               BadBank Home
