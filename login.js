@@ -73,65 +73,73 @@ function Login() {
   }
 
   return (
-    <Card
-      bgcolor="primary"
-      txtcolor="white"
-      header="Login"
-      status={status}
-      body={
-        show ? (
-          <>
-            <br />
-            Email
-            <br />
-            <input
-              type="input"
-              className="form-control"
-              id="email"
-              placeholder="Enter Email"
-              value={emailVal}
-              onChange={(e) => setEmailVal(e.currentTarget.value)}
-            />
-            <br />
-            Password
-            <br />
-            <input
-              type="password"
-              className="form-control"
-              id="password"
-              placeholder="Enter Password"
-              value={passwordVal}
-              onChange={handleChange}
-            />
-            <br />
-            <button
-              type="submit"
-              className="btn btn-light"
-              disabled={buttonStatus}
-              onClick={handleLogin}
-            >
-              Login
-            </button>
-            <br />
-            <br />
-          </>
-        ) : (
-          <>
-            <h5> {`Welcome back ${currentAccount}! `} </h5>
-            <br />
-            Check your account information{" "}
-            <a href="#/alldata" className="text-light">
-              here
-            </a>
-            !
-            <br />
-            <br />
-            <button type="submit" className="btn btn-light" onClick={logout}>
-              Logout
-            </button>
-          </>
-        )
-      }
-    />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Card
+        bgcolor="primary"
+        txtcolor="white"
+        header="Login"
+        status={status}
+        body={
+          show ? (
+            <>
+              <br />
+              Email
+              <br />
+              <input
+                type="input"
+                className="form-control"
+                id="email"
+                placeholder="Enter Email"
+                value={emailVal}
+                onChange={(e) => setEmailVal(e.currentTarget.value)}
+              />
+              <br />
+              Password
+              <br />
+              <input
+                type="password"
+                className="form-control"
+                id="password"
+                placeholder="Enter Password"
+                value={passwordVal}
+                onChange={handleChange}
+              />
+              <br />
+              <button
+                type="submit"
+                className="btn btn-light"
+                disabled={buttonStatus}
+                onClick={handleLogin}
+              >
+                Login
+              </button>
+              <br />
+              <br />
+            </>
+          ) : (
+            <>
+              <h5> {`Welcome back ${currentAccount}! `} </h5>
+              <br />
+              Check your account information{" "}
+              <a href="#/alldata" className="text-light">
+                here
+              </a>
+              !
+              <br />
+              <br />
+              <button type="submit" className="btn btn-light" onClick={logout}>
+                Logout
+              </button>
+            </>
+          )
+        }
+      />
+    </div>
   );
 }

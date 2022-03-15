@@ -81,58 +81,66 @@ function Withdraw() {
   }
 
   return (
-    <Card
-      bgcolor="warning"
-      txtcolor="black"
-      header="Withdraw"
-      status={status}
-      body={
-        show ? (
-          <>
-            You must{" "}
-            <a
-              href="#/login/"
-              className="btnDeposit"
-              data-toggle="tooltip"
-              title="Login to your account"
-            >
-              {" "}
-              Login
-            </a>{" "}
-            to make a transaction.
-            <br />
-            <br />
-          </>
-        ) : (
-          <>
-            <h3>Current Balance: ${balance}</h3>
-            <br />
-            <br />
-            Withdrawal Amount:
-            <br />
-            <input
-              type="input"
-              className="form-control"
-              id="deposit"
-              placeholder="$0.00"
-              value={withdraw}
-              onChange={handleChange}
-            />
-            <br />
-            <button
-              type="submit"
-              className="btn btn-light"
-              bgcolor="danger"
-              disabled={buttonStatus}
-              onClick={handleWithdraw}
-            >
-              Withdraw
-            </button>
-            <br />
-            <br />
-          </>
-        )
-      }
-    />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Card
+        bgcolor="warning"
+        txtcolor="black"
+        header="Withdraw"
+        status={status}
+        body={
+          show ? (
+            <>
+              You must{" "}
+              <a
+                href="#/login/"
+                className="btnDeposit"
+                data-toggle="tooltip"
+                title="Login to your account"
+              >
+                {" "}
+                Login
+              </a>{" "}
+              to make a transaction.
+              <br />
+              <br />
+            </>
+          ) : (
+            <>
+              <h3>Current Balance: ${balance}</h3>
+              <br />
+              <br />
+              Withdrawal Amount:
+              <br />
+              <input
+                type="input"
+                className="form-control"
+                id="deposit"
+                placeholder="$0.00"
+                value={withdraw}
+                onChange={handleChange}
+              />
+              <br />
+              <button
+                type="submit"
+                className="btn btn-light"
+                bgcolor="danger"
+                disabled={buttonStatus}
+                onClick={handleWithdraw}
+              >
+                Withdraw
+              </button>
+              <br />
+              <br />
+            </>
+          )
+        }
+      />
+    </div>
   );
 }

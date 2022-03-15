@@ -68,64 +68,76 @@ function CreateAccount() {
   }
 
   return (
-    <Card
-      bgcolor="success"
-      header="Create Account"
-      status={status}
-      body={
-        show ? (
-          <>
-            Name
-            <br />
-            <input
-              type="input"
-              className="form-control"
-              id="name"
-              placeholder="Enter Name"
-              value={name}
-              onChange={nameValidate}
-            />
-            <br />
-            Email Address
-            <br />
-            <input
-              type="input"
-              className="form-control"
-              id="email"
-              placeholder="Enter Email"
-              value={email}
-              onChange={emailValidate}
-            />
-            <br />
-            Password
-            <br />
-            <input
-              type="password"
-              className="form-control"
-              id="password"
-              placeholder="Enter Password"
-              value={password}
-              onChange={buttonEnable}
-            />
-            <br />
-            <button
-              type="submit"
-              className="btn btn-light"
-              disabled={buttonStatus}
-              onClick={handleCreate}
-            >
-              Create Account
-            </button>
-          </>
-        ) : (
-          <>
-            <h5>Success</h5>
-            <button type="submit" className="btn btn-light" onClick={clearForm}>
-              Add another account
-            </button>
-          </>
-        )
-      }
-    />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Card
+        bgcolor="success"
+        header="Create Account"
+        status={status}
+        body={
+          show ? (
+            <>
+              Name
+              <br />
+              <input
+                type="input"
+                className="form-control"
+                id="name"
+                placeholder="Enter Name"
+                value={name}
+                onChange={nameValidate}
+              />
+              <br />
+              Email Address
+              <br />
+              <input
+                type="input"
+                className="form-control"
+                id="email"
+                placeholder="Enter Email"
+                value={email}
+                onChange={emailValidate}
+              />
+              <br />
+              Password
+              <br />
+              <input
+                type="password"
+                className="form-control"
+                id="password"
+                placeholder="Enter Password"
+                value={password}
+                onChange={buttonEnable}
+              />
+              <br />
+              <button
+                type="submit"
+                className="btn btn-light"
+                disabled={buttonStatus}
+                onClick={handleCreate}
+              >
+                Create Account
+              </button>
+            </>
+          ) : (
+            <>
+              <h5>Success</h5>
+              <button
+                type="submit"
+                className="btn btn-light"
+                onClick={clearForm}
+              >
+                Add another account
+              </button>
+            </>
+          )
+        }
+      />
+    </div>
   );
 }

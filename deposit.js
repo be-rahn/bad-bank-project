@@ -83,60 +83,68 @@ function Deposit() {
   }
 
   return (
-    <Card
-      bgcolor="warning"
-      txtcolor="black"
-      header="Deposit"
-      status={status}
-      body={
-        show ? (
-          <>
-            You must{" "}
-            <a
-              href="#/login/"
-              className="btnDeposit"
-              data-toggle="tooltip"
-              title="Login to your account"
-            >
-              {" "}
-              Login
-            </a>{" "}
-            to make a transaction.
-            <br />
-            <br />
-          </>
-        ) : (
-          <>
-            <h4>Current Balance: ${balance}</h4>
-            <br />
-            Deposit Amount:
-            <br />
-            <input
-              type="input"
-              className="form-control"
-              id="deposit"
-              placeholder="$0.00"
-              value={deposit}
-              onChange={handleChange}
-            />
-            <br />
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Card
+        bgcolor="warning"
+        txtcolor="black"
+        header="Deposit"
+        status={status}
+        body={
+          show ? (
             <>
-              <button
-                id="button"
-                type="submit"
-                className="btn btn-light"
-                disabled={buttonStatus}
-                onClick={HandleDeposit}
+              You must{" "}
+              <a
+                href="#/login/"
+                className="btnDeposit"
+                data-toggle="tooltip"
+                title="Login to your account"
               >
-                Deposit
-              </button>
+                {" "}
+                Login
+              </a>{" "}
+              to make a transaction.
               <br />
               <br />
-              <div className="text-left"></div>
             </>
-          </>
-        )
-      }
-    />
+          ) : (
+            <>
+              <h4>Current Balance: ${balance}</h4>
+              <br />
+              Deposit Amount:
+              <br />
+              <input
+                type="input"
+                className="form-control"
+                id="deposit"
+                placeholder="$0.00"
+                value={deposit}
+                onChange={handleChange}
+              />
+              <br />
+              <>
+                <button
+                  id="button"
+                  type="submit"
+                  className="btn btn-light"
+                  disabled={buttonStatus}
+                  onClick={HandleDeposit}
+                >
+                  Deposit
+                </button>
+                <br />
+                <br />
+                <div className="text-left"></div>
+              </>
+            </>
+          )
+        }
+      />
+    </div>
   );
 }
